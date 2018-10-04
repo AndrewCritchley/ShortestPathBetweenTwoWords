@@ -10,6 +10,7 @@ namespace WordDistanceTechnicalTest.Console
     {
         static void Main(string[] args)
         {
+            var word = "Hello";
         }
     }
 }
