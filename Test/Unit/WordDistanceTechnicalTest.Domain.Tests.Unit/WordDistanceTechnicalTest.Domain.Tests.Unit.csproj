@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="Fixtures\FixedLengthDictionaryProviderTests\OnlyReturnSpecifiedLengthWordsFixture.cs" />
     <Compile Include="Fixtures\ShortestPathCalculatorTests\DetermineShortestPathFixture.cs" />
+    <Compile Include="Fixtures\StringExtensionTests\HasOnlySingleLetterDifferenceFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

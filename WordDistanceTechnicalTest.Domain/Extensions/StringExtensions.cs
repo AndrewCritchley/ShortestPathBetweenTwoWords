@@ -5,7 +5,7 @@ namespace WordDistanceTechnicalTest.Domain.Extensions
 {
     public static class StringExtensions
     {
-        public static int GetWordDistanceTo(this string startWord, string endWord)
+        public static bool HasOnlySingleLetterDifference(this string startWord, string endWord)
         {
             var differenceCount = 0;
 
@@ -16,9 +16,14 @@ namespace WordDistanceTechnicalTest.Domain.Extensions
 
                 if (startLetter != endLetter)
                     differenceCount++;
+
+                // If we have more than one difference we can end this call early
+                //  it's a bit of an early optimisation but performance was mentioned over the phone.
+                if (differenceCount >= 2)
+                    return false;
             }
 
-            return differenceCount;
+            return true;
         }
     }
 }

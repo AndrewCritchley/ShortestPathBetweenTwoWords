@@ -9,7 +9,7 @@ namespace WordDistanceTechnicalTest.Console.Configuration
 
         public ApplicationConfiguration()
         {
-            var dictionaryWordAllowedLengthString = GetOptionalValue(nameof(DictionaryWordAllowedLength);
+            var dictionaryWordAllowedLengthString = GetOptionalValue(nameof(DictionaryWordAllowedLength));
             if (!string.IsNullOrWhiteSpace(dictionaryWordAllowedLengthString))
                 DictionaryWordAllowedLength = int.Parse(dictionaryWordAllowedLengthString);
         }
