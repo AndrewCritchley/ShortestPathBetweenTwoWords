@@ -32,3 +32,4 @@
 * Metrics are useful - time taken / dictionary size / etc. These can be useful to see issues which grow over time.
 * There could be more tests, however the parts with the largest cyclomatic complexity are covered which is the important thing for now.
 * Naming things is hard. That is reflected in the code. These days I prefer to establish a Ubiquitous Language with any stakeholders during the discovery phase of a feature. This makes requirements gathering, development and feedback easier. It also helps the codebase maintain consistent naming within itself, as well as consitency with the actual business domain it's involved in.
+* There's a lot of use in integration tests in code like this. The interaction between the components is very important to test. Tests such as ensuring the file can be read from disk, it will create the full path to the output file, etc are all useful for long term code bases.
