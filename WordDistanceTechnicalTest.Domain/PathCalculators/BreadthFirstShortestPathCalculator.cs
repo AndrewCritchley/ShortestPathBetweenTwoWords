@@ -44,16 +44,12 @@ namespace WordDistanceTechnicalTest.Domain.PathCalculators
                 else if (shortestPath == null || IsCurrentPathChildrenStillShorterThanTheShortestPathAlreadyFound(path, shortestPath))
                 {
                     foreach (var unvisitedPath in path.CreateUnvisitedPaths())
-                    {
                         pathsQueue.Enqueue(unvisitedPath);
-                    }
                 }
             }
 
             if (shortestPath == null)
-            {
                 throw new GraphPathNotFoundException(startWord, endWord);
-            }
 
             return shortestPath.AsStrings();
         }
@@ -81,10 +77,8 @@ namespace WordDistanceTechnicalTest.Domain.PathCalculators
             var allGraphItems = dictionaryWords.Select(e => new GraphItem(e)).ToList();
 
             foreach (var graphItem in allGraphItems)
-            {
                 // I did have this as eager execution but there's no need to generate the entire graph upfront.
                 graphItem.WordsWithASingleChange = allGraphItems.Where(e => e.Word.HasOnlySingleLetterDifference(graphItem.Word));
-            }
 
             return allGraphItems;
         }
