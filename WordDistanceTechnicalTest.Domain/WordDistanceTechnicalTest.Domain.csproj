@@ -41,10 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Exceptions\DictionaryFileNotFoundException.cs" />
+    <Compile Include="Exceptions\GraphPathNotFoundException.cs" />
+    <Compile Include="Extensions\QueueExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="ShortestPathCalculator.cs" />
-    <Compile Include="WordProvider.cs" />
+    <Compile Include="PathCalculators\IShortestPathCalculator.cs" />
+    <Compile Include="PathCalculators\Models\GraphItem.cs" />
+    <Compile Include="PathCalculators\Models\GraphPath.cs" />
+    <Compile Include="ProcessRunner.cs" />
+    <Compile Include="ResultProcessors\IResultProcessor.cs" />
+    <Compile Include="ResultProcessors\OutputToTextFileResultsProcessor.cs" />
+    <Compile Include="PathCalculators\BreadthFirstShortestPathCalculator.cs" />
+    <Compile Include="WordProviders\FixedLengthDictionaryProvider.cs" />
+    <Compile Include="WordProviders\WordProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="PathCalculators\Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

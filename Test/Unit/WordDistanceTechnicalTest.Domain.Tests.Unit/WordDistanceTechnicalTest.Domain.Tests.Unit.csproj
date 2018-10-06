@@ -65,6 +65,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fixtures\FixedLengthDictionaryProviderTests\OnlyReturnSpecifiedLengthWordsFixture.cs" />
     <Compile Include="Fixtures\ShortestPathCalculatorTests\DetermineShortestPathFixture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
