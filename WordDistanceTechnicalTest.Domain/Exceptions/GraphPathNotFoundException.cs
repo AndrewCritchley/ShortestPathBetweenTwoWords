@@ -7,8 +7,8 @@ namespace WordDistanceTechnicalTest.Domain.Exceptions
     /// </summary>
     public class GraphPathNotFoundException : Exception
     {
-        public string StartWord { get; set; }
-        public string EndWord { get; set; }
+        public string StartWord { get; }
+        public string EndWord { get; }
 
         public GraphPathNotFoundException(string startWord, string endWord)
             : base($"Could not find a path between the word '{startWord}' and '{endWord}'.")

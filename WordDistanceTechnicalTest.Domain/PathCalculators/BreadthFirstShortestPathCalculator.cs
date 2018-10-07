@@ -77,8 +77,7 @@ namespace WordDistanceTechnicalTest.Domain.PathCalculators
             var allGraphItems = dictionaryWords.Select(e => new GraphItem(e)).ToList();
 
             foreach (var graphItem in allGraphItems)
-                // I did have this as eager execution but there's no need to generate the entire graph upfront.
-                graphItem.WordsWithASingleChange = allGraphItems.Where(e => e.Word.HasOnlySingleLetterDifference(graphItem.Word));
+                graphItem.SetWordsWithASingleChange(allGraphItems);
 
             return allGraphItems;
         }
