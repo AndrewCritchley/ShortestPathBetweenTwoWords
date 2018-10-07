@@ -15,6 +15,7 @@
 * I assumed the start and end words will always be present in the dictionary.
 * You could end up with multiple paths of the same length between the start and end words (depending on the dictionary provided). This should be handled in a consistent way by ordering the dictionary alphabetically.
 * The spec specifies that this is a command line interface. I assume this means that there is no requirement to accept command line arguments.
+* This should be case insensitive.
 
 ## Implementation Notes
 

@@ -14,7 +14,7 @@ namespace WordDistanceTechnicalTest.Domain.Extensions
                 var startLetter = startWord.ElementAtOrDefault(i);
                 var endLetter = endWord.ElementAtOrDefault(i);
 
-                if (startLetter != endLetter)
+                if (!string.Equals(startLetter.ToString(), endLetter.ToString(), StringComparison.InvariantCultureIgnoreCase))
                     differenceCount++;
 
                 // If we have more than one difference we can end this call early
