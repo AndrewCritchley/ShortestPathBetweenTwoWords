@@ -1,6 +1,6 @@
-﻿using WordDistanceTechnicalTest.Domain.PathCalculators;
+﻿using WordDistanceTechnicalTest.Domain.DictionaryProviders;
+using WordDistanceTechnicalTest.Domain.PathCalculators;
 using WordDistanceTechnicalTest.Domain.ResultProcessors;
-using WordDistanceTechnicalTest.Domain.WordProviders;
 
 namespace WordDistanceTechnicalTest.Domain
 {

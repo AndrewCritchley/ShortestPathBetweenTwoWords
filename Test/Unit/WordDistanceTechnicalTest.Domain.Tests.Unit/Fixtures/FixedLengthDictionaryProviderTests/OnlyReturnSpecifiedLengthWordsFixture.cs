@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
-using WordDistanceTechnicalTest.Domain.WordProviders;
+using WordDistanceTechnicalTest.Domain.DictionaryProviders;
 
 namespace WordDistanceTechnicalTest.Domain.Tests.Unit.Fixtures.FixedLengthDictionaryProviderTests
 {
@@ -29,9 +29,7 @@ namespace WordDistanceTechnicalTest.Domain.Tests.Unit.Fixtures.FixedLengthDictio
             };
 
             var dictionaryProvider = Substitute.For<IDictionaryProvider>();
-
             dictionaryProvider.GetWords().Returns(rawDictionary);
-
             var sut = new FixedLengthDictionaryProvider(dictionaryProvider, 4);
 
             // Act

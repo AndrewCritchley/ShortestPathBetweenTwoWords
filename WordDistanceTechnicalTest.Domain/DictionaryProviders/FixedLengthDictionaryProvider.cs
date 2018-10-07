@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace WordDistanceTechnicalTest.Domain.WordProviders
+namespace WordDistanceTechnicalTest.Domain.DictionaryProviders
 {
     /// <summary>
     /// Decorator pattern. I've used this because the spec specifies we should only consider four letter words,
@@ -21,11 +21,8 @@ namespace WordDistanceTechnicalTest.Domain.WordProviders
         public IReadOnlyCollection<string> GetWords()
         {
             var allWords = _dictionaryProvider.GetWords();
-
             var wordsWithSpecifiedLength = allWords.Where(e => e.Length == _length).ToList();
-
             //TODO: This should log out the original length and the filtered length. 
-
             return wordsWithSpecifiedLength;
 
         }

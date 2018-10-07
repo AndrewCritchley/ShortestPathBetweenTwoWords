@@ -4,16 +4,9 @@ using System.IO;
 using System.Linq;
 using WordDistanceTechnicalTest.Domain.Exceptions;
 
-namespace WordDistanceTechnicalTest.Domain.WordProviders
+namespace WordDistanceTechnicalTest.Domain.DictionaryProviders
 {
-    public interface IDictionaryProvider
-    {
-        /// <summary>
-        /// Returns a list of dictionary words in alphabetical order
-        /// </summary>
-        IReadOnlyCollection<string> GetWords();
-    }
-
+    
     public class TextFileDictionaryProvider : IDictionaryProvider
     {
         private readonly Lazy<IReadOnlyCollection<string>> _words;
@@ -31,9 +24,8 @@ namespace WordDistanceTechnicalTest.Domain.WordProviders
         private IReadOnlyCollection<string> LoadWords(string filePath)
         {
             if (!File.Exists(filePath))
-            {
                 throw new DictionaryFileNotFoundException(filePath);
-            }
+
             return File.ReadAllLines(filePath)
                     .OrderBy(e => e)
                     .ToList();
